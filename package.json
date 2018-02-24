@@ -1,0 +1,27 @@
+{
+  "name": "mallow",
+  "version": "1.0.0",
+  "description": "a light frame.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mallow-fight/mallow.git"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1"
+  },
+  "keywords": [
+    "mallow",
+    "frame"
+  ],
+  "author": "mallow <861674705@qq.com> (http://www.mallowfight.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mallow-fight/mallow/issues"
+  },
+  "homepage": "https://github.com/mallow-fight/mallow#readme"
+}
