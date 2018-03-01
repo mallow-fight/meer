@@ -1,7 +1,7 @@
 {
   "name": "meer",
-  "version": "0.0.4",
-  "description": "a light frame.",
+  "version": "0.0.5",
+  "description": "a ui design for vue",
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec",

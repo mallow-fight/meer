@@ -2,9 +2,9 @@
 
 ## a ui design for vue.
 
-usage:
+### usage:
 
-### Buttoner
+#### Buttoner
 
 ```js
 <template>
