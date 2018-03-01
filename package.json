@@ -1,18 +1,31 @@
 {
   "name": "meer",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "a light frame.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "build:development": "webpack --config build/build-meer/build-meer-dev.js --watch",
+    "build:production": "webpack --config build/build-meer/build-meer-pro.js --watch",
+    "build:all": "rm -rf ./dist && npm run build:development && npm run build:production"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mallow-fight/mallow.git"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "babel-loader": "8.0.0-beta.0",
     "chai": "^4.1.2",
-    "mocha": "^5.0.1"
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.10",
+    "meer-pack": "^0.0.10",
+    "mocha": "^5.0.1",
+    "vue-loader": "^14.1.1",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9"
   },
   "keywords": [
     "mallow",

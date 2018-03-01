@@ -1,5 +1,3 @@
 'use strict'
-
-module.exports = function (a, b) {
-    return a + b
-}
+const meer = require('./dist/packages/meer.production')
+module.exports = meer

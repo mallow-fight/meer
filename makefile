@@ -1,0 +1,2 @@
+buildAndTest:
+	npm run build
