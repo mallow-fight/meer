@@ -1,6 +1,6 @@
 {
   "name": "meer",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "a light frame.",
   "main": "index.js",
   "scripts": {
