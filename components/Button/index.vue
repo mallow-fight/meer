@@ -4,8 +4,7 @@
         :class="buttonClass"
         @click="click"
         >
-        <span v-show="!showSecond">{{text}}</span>
-        <span v-show="showSecond">{{childSecond}}</span>
+        <span>{{childText}}</span>
         </button>
     </span>
 </template>

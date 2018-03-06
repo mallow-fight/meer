@@ -3,8 +3,7 @@ export default {
     data() {
         return {
             disabled: false,
-            showSecond: false,
-            childSecond: 45
+            childText: ''
         }
     },
     computed: {
@@ -16,18 +15,32 @@ export default {
             ]
         }
     },
+    mounted() {
+        this.childText = this.text
+    },
     methods: {
-        outerClick() {
-            if(this.disabled) return
-            this.disabled = this.showSecond  = true     
-            this.childSecond = this.second
+        formatSecond() {
+            if((!this.second && this.second !== 0) || this.second < 0) return false
+            return true
+        },
+        beforeCountDown() {
+            this.disabled  = true     
+            this.childText = this.second
             this.buttonClass.push('meer-button-count-down')
+        },
+        afterCountDown() {
+            this.disabled = false
+            this.childText = this.text
+            this.buttonClass.pop()            
+        },
+        outerClick() {
+            if(!this.formatSecond() || this.disabled) return
+            this.beforeCountDown()
             this.countDownTime = setInterval(() => {
-                this.childSecond -= 1
-                if(this.childSecond === -1) {
+                this.childText -= 1
+                if(this.childText === -1) {
                     clearInterval(this.countDownTime)
-                    this.buttonClass.pop()
-                    this.disabled = this.showSecond = false
+                    this.afterCountDown()
                 }
             }, 1000)
         }
@@ -58,7 +71,7 @@ export default {
         },
         second: {
             type: Number,
-            default: 45
+            default: -1
         }
     }
 }
