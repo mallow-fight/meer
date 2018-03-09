@@ -5,6 +5,7 @@ import Col from './Col/index.js'
 import Affix from './Affix/index.vue'
 import Breadcrumb from './Breadcrumb/index.js'
 import Dropdown from './Dropdown/index.js'
+import MenuGroup from './Menu/index.vue'
 function install (Vue) {
     Vue.mixin({
         components: {
@@ -14,7 +15,10 @@ function install (Vue) {
             Coler: Col,
             Affixer: Affix,
             Breadcrumber: Breadcrumb,
-            Dropdowner: Dropdown
+            Dropdowner: Dropdown,
+            'Menuer-group': MenuGroup,
+            Menuer: MenuGroup.menu,
+            'Menuer-item': MenuGroup.item
         }
     })
 }

@@ -27,12 +27,12 @@ export default {
     render(h) {
         const handleClick = (e) => {
             this.sessionStatus = !this.sessionStatus
-            console.log(this.sessionStatus)
         }
-        const renderChild = [h('div', ['title'])]
+        const renderChildChild = [this.title]
         if(this.sessionStatus) {
-            renderChild.push(this.$slots.default)
+            renderChildChild.push(h('div', [this.$slots.default]))
         }
+        const renderChild = [h('div',renderChildChild)]
         const event = {on: {}}
         ;(this.action === 'click') && (event.on.click = handleClick)
         ;(this.action === 'hover') && (event.on.mouseenter = event.on.mouseleave = handleClick)
