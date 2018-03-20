@@ -1,0 +1,60 @@
+@import '../index.less';
+.meer-button{
+    .normalSize;
+    width: auto;
+    padding: 0 @normalSize;
+    line-height: @largePercent;
+    .textCenter;
+    font-weight: @largePercent;
+    border-radius: @tinySize;
+    .fastTransition;
+    .handCursor;
+    .noOutLine;
+}
+.meer-button-normal{
+    background: @deepColor;
+    border-color: @shallowColor;
+    color: @whiteColor;
+}
+.meer-button-normal:hover, .meer-button-normal:focus{
+    opacity: .8;
+}
+.meer-button-simple{
+    border: 1px solid @simpleColor;
+}
+.meer-button-simple:hover, .meer-button-simple:focus{
+    color: @deepColor;
+    border: 1px solid @shallowColor;
+}
+.meer-button-dotted{
+    border: 1px dotted @simpleColor;
+}
+.meer-button-dotted:hover, .meer-button-dotted:focus{
+    border: 1px dotted @deepColor;
+    color: @shallowColor;
+}
+.meer-button-danger{
+    color: @dangerColor;
+}
+.meer-button-danger:hover,.meer-button-danger:focus{
+    color: @whiteColor;
+    background: @dangerColor;
+    border: 1px solid @dangerColor;
+}
+.meer-button-size-large{
+    font-size: @largeSize;
+    width: auto;
+    padding: 0 2rem;
+    line-height: 2;
+    .largeWeight;
+}
+.meer-button-size-small{
+    font-size: @smallerSize;
+    width: auto;
+    padding: 0 @smallerSize;
+    line-height: @normalPercent;
+    .smallWeight
+}
+.meer-button-count-down{
+    opacity: .5;
+}

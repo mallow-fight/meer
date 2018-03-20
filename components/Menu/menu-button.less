@@ -1,0 +1,46 @@
+@import '../index.less';
+.menu-button,.menu-vertical-button {
+    font-size: @normalSize;
+    color: @deepColor;
+    padding: @smallerSize;
+    fill: @deepColor;  
+    .noOutLine;
+    .fitWidth;           
+    .noBorder;
+}
+.menu-button{
+    position: relative; 
+}
+.menu-vertical-button{
+    display: block;
+}
+.menu-button:hover {
+    color: @shallowColor;
+    fill: @shallowColor;
+    border-top: 1px solid @shallowColor;
+}
+.menu-vertical-button:hover {
+    color: @shallowColor;
+    fill: @shallowColor;
+    border-left: 1px solid @shallowColor;
+}
+.menu-button-horizon-icon{
+    display: inline-block;
+    height: @normalSize;
+    width: @normalSize;
+    .middle;
+}
+.menu-button-horizon-title{
+    display: inline-block;
+}
+.not-allowed{
+    .noAllowed;
+}
+.slotClass{
+    position: absolute;
+    width: 100%;
+}
+.relative-button{
+    .relative;
+    .fitWidth;
+}

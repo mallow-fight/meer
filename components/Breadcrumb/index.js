@@ -26,15 +26,36 @@ export default {
         currentPath.split('/').map( path => {
             if(path) currentPathArr.push(path)
         })
-        const renderPath = currentPathArr.map( path => {
+        function wrapPath(inx) {
+            let pt = ''
+            for(let i =0; i < inx + 1; i++) {
+                pt = pt + currentPathArr[i] + '/'
+            }
+            return pt
+        }
+        const cp = []
+        currentPathArr.map( (path, inx) => {
+            cp[inx] = {
+                name: path,
+                pathTotal: wrapPath(inx)
+            }
+        })
+        const renderPath = cp.map( path => {
             return h(
                 'span',
+                {
+                    on: {
+                        click: (e) => {
+                            this.$router.push('/'+ path.pathTotal)
+                        }
+                    }
+                },
                 [   
                     h('span',{
                         style: {
                             color: this.pathColor
                         }
-                    }, [path]),
+                    }, [path.name]),
                     h('span',{
                         style: {
                             color: this.splitColor

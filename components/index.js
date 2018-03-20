@@ -4,8 +4,16 @@ import Row from './Row/index.js'
 import Col from './Col/index.js'
 import Affix from './Affix/index.vue'
 import Breadcrumb from './Breadcrumb/index.js'
-import Dropdown from './Dropdown/index.js'
-import MenuGroup from './Menu/index.vue'
+import Dropdown from './Dropdown/index.vue'
+import Pagination from './Pagination/index.vue'
+import Autocomplete from './Autocomplete/index.vue'
+import Cascader from './Cascader/index.vue'
+import Icon from './Icon/index.js'
+import Layout from './Layout/index.vue'
+import Menu from './Menu/menu.vue'
+import MenuButton from './Menu/menu-button.vue'
+import MenuGroup from './Menu/menu-group.vue'
+import MenuItem from './Menu/menu-item.vue'
 function install (Vue) {
     Vue.mixin({
         components: {
@@ -16,9 +24,15 @@ function install (Vue) {
             Affixer: Affix,
             Breadcrumber: Breadcrumb,
             Dropdowner: Dropdown,
+            Paginationer: Pagination,
+            Autocompleter: Autocomplete,
+            Cascader: Cascader,
+            Iconer: Icon,
+            Layouter: Layout,
+            Menuer: Menu,
+            'Menuer-button': MenuButton,
             'Menuer-group': MenuGroup,
-            Menuer: MenuGroup.menu,
-            'Menuer-item': MenuGroup.item
+            'Menuer-item': MenuItem
         }
     })
 }
