@@ -1,0 +1,39 @@
+@import '../index.less';
+.calendar{
+    width: @normalSize*10;
+    border: 1px solid @deepColor;
+    .downShadow;
+    padding: @smallerSize;
+}
+.calendar-item{
+    display: inline-block;
+    width: 2rem;
+    .textCenter;
+    margin-top: @tinySize;
+    .noOutLine;
+    .noBorder;
+}
+.title{
+    width: @normalSize*10;
+    margin-right: auto;
+    margin-left: auto;
+    .textCenter;
+}
+.choosed, .choosedHour, .choosedMinute, .choosedSecond{
+    background: @deepColor;
+    color: @whiteColor;
+}
+.today{
+    border: 1px solid @shallowColor;
+}
+.notThisMonth{
+    color: @simpleColor;
+}
+.time-select{
+    display: inline-block;
+    width: 4rem;
+    height: 10rem;
+    overflow: scroll;
+    .textCenter;
+    border: 1px solid @shallowColor;
+}

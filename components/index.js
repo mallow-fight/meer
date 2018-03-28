@@ -14,6 +14,12 @@ import Menu from './Menu/menu.vue'
 import MenuButton from './Menu/menu-button.vue'
 import MenuGroup from './Menu/menu-group.vue'
 import MenuItem from './Menu/menu-item.vue'
+import Steps from './Step/index.vue'
+import Step from './Step/step.vue'
+import Checkbox from './Checkbox/index.vue'
+import CheckAllbox from './Checkbox/CheckAllbox.vue'
+import DatePicker from './DatePicker/index.vue'
+import TimePicker from './DatePicker/TimePicker.vue'
 function install (Vue) {
     Vue.mixin({
         components: {
@@ -32,7 +38,13 @@ function install (Vue) {
             Menuer: Menu,
             'Menuer-button': MenuButton,
             'Menuer-group': MenuGroup,
-            'Menuer-item': MenuItem
+            'Menuer-item': MenuItem,
+            Steps,
+            Step,
+            Checkbox,
+            CheckAllbox,
+            DatePicker,
+            TimePicker
         }
     })
 }

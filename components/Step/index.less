@@ -1,0 +1,45 @@
+@import '../index.less';
+.completeComp,.currentComp,.waitComp{
+    display: inline-block;
+}
+.vertical{
+    display: block;
+}
+.completeComp {
+    fill: @shallowColor;
+}
+.currentComp {
+    fill: @blackColor;
+}
+.waitComp {
+    fill: @simpleColor;
+    color: @simpleColor;
+}
+.contain {
+    width: 100%;
+}
+.everyStep {
+    display: inline-block;
+}
+.completeLine, .waitLine {
+    display: inline-block;
+    vertical-align: text-top;
+    width: 10rem;
+    height: .1rem;
+    margin-left: .2rem;
+    margin-right: .2rem;
+}
+.completeLine, .completeVerticalLine {
+    background: @shallowColor;    
+}
+.waitLine, .waitVerticalLine {
+    background: @simpleColor;
+}
+.completeVerticalLine, .waitVerticalLine{
+    display: block;
+    height: 10rem;
+    width: .1rem;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+    margin-left: 1rem;
+}
